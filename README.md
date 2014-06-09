@@ -27,3 +27,17 @@ Functionality to be provided by you:
    ready, blocked, and running processes.
 
 4. A process status on GUI command (p#, priority and current state).
+
+
+Details for Requirements
+------------------------
+
+1. Priority Scheduling -- Ready queue maintained in priority order, where priority of a process is:
+determined by OS (e.g., run system processes before user processes use average time of last CPU bursts, number of open files, memory size (to get memory hogs out as quickly as possible))
+purchased by user
+based on corporate policy (e.g. give high priority to some project viewed as very important to company)
+
+2. Schedulers
+High level schedulers (mostly for batch systems) selects from queue of waiting processes. Often tries to balance job mix (e.g. mix of I/O bound and CPU bound tasks). Often call the job scheduler.
+Low level scheduler: selects a process from the ready queue. Often called the dispatcher.
+Medium level scheduler: purpose is to improve performance by selecting processes to swap out. Usually means that the memory allocated to them is reallocated to other processes to improve performance. Swapped out processes must later be reinstated.
